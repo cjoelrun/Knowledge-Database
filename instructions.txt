@@ -1,0 +1,29 @@
+Using Scheme, develop a function which takes as input a knowledge database, which is essentially a list of factual knowledge such as Jason likes cars, Mary is eloquent, and provides a query interface which automatically answer arbitrary questions such as who like cars, Jason likes what, who are friends with each other, etc. Our data-set is not large, so there is no need to resort to database techniques to store and extract data efficiently. The main challenge is how to represent and understand the structure of the knowledge and transform the structure to satisfy varying queries.
+
+If you solve the above problem reasonably well, you'll gain an extra bonus of 5-10% of your overall grade for this class. That is, this could be enough to boost your grade from C to B, or from B to A.
+
+You're also encouraged to discuss the solutions here. Collaboration is encouraged, although contributions from each partner need to be documented.
+
+Here is a starting point
+
+(define knowledge '())
+
+(define save (lambda (item)
+               (set! knowledge (cons item knowledge))))
+
+(define query (lambda (question)
+                knowledge))
+
+
+And a trivial test case
+
+> (save '(Jody is an actress))
+(void)
+> (query '(who is Jody))
+(list (list 'Jody 'is 'an 'actress))
+
+Note that in order to use the set! operator, you need to change the DrScheme language level to "Advanced Students". Also note that this is allowed only for the extra-credit project. Not for regular homework assignments or the labs.
+
+You do not have to follow what I give you. More advanced extensions include using File I/O to save the knowledge base permanently. Also, obviously you want to expand the knowledge database and expand the query support. The query function I gave you is basically empty and serves only as a blank starting point as it simply returns the whole knowledge base.
+
+The extra-credit project already posted in this thread requires significant creativity in programming which may be too much for some of the students in our class. To accommodate requests from students who did not study for the midterm exams, I will accept extra-credit work to make up the lost study time until the last day of class (Apr 27th), as explained in the following.
