@@ -41,20 +41,6 @@
   )           ; end definition
 
 (define parse_noun_phrase
-  (lambda (list_of_tokens)         ; DONT DO THIS
-    (if (and
-	 (member? (car list_of_tokens) '(a the))
-	 (member? (cadr list_of_tokens) noun)
-	 )
-	(cons_parse
-	 (list 'noun_phrase   (car list_of_tokens)
-	       (cadr list_of_tokens))
-	 (cddr list_of_tokens)
-	 )
-	#f)
-    ))
-
-(define parse_noun_phrase
   (lambda (list_of_tokens)
     (let ((p_det (parse_determiner list_of_tokens)))     ; (1)
       (if p_det                                        ; (2)
