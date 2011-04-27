@@ -19,7 +19,7 @@
 ;; (relationship (description "")
 ;; 	      (connection '())
 
-(object '(name "Jody")
+'("Jody")
         '(description "an actress")
         '(description "a dancer")
 
