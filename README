@@ -8,6 +8,8 @@ All of this system's content was created by our group.
 Description:
 This Knowledge System attempts to provide a database of knowledge.  Where simple query's can be made on the collection of knowledge and answers will be given.  Knowledge can be added to the database and subsequently be queried.
 
-Files:
-
 Instructions:
+To add knowledge:
+(save '(<subject> is <description>")
+To recall knowledge:
+(query '(<What is <subject>")
